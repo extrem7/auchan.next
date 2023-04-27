@@ -1,10 +1,12 @@
-import { app } from '@storybook/vue3'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { setup } from '@storybook/vue3'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { applyProviders } from '@/app/providers'
 import '@/app/styles/index.css'
 
-applyProviders(app)
+setup((app)=>{
+  applyProviders(app)
+})
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

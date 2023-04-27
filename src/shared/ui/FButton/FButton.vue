@@ -63,7 +63,6 @@ const buttonClasses = computed(() => {
 <template>
   <Component
     :is="tag"
-    v-wave
     class="min-h-[2.5rem] rounded border px-4 py-1.5 transition-all"
     :class="[
       buttonClasses,
