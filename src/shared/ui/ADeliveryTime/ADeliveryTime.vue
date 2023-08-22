@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import Clock from './clock.svg'
 import Info from './info.svg'
+
+const props = defineProps<{
+  delivery: String
+  time: String
+}> ()
 </script>
 
 <template>
@@ -11,10 +16,10 @@ import Info from './info.svg'
       <Clock class="mt-3 ml-5 mr-4 h-6 w-7 text-red-600" />
       <div>
         <div class="text-base font-medium">
-          <slot name="time" />
+          {{ props.time }}
         </div>
         <a class=" text-sm text-red-600">
-          <slot name="delivery" />
+          {{ props.delivery }}
         </a>
       </div>
       <Info class="ml-3 w-5 text-gray-600" />
